@@ -1,13 +1,47 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap');
+
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+    font-family: 'JetBrains Mono', monospace;
+    background: linear-gradient(180deg, #14131B 0%, #08070B 100%);
+    height: 100vh;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+input[type='checkbox']:checked::after {
+    content: '';
+    position: absolute;
+    height: 0.45rem;
+    width: 0.8rem;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-45deg);
+    border-bottom: 3px solid hsl(248, 10%, 15%);
+    border-left: 3px solid hsl(248, 10%, 15%);
+}
+
+input[type='range'] {
+    background-color: hsl(248, 15%, 11%);
+    background-image: linear-gradient(hsl(127, 100%, 82%), hsl(127, 100%, 82%));
+    background-size: 50% 100%;
+    background-repeat: no-repeat;
+    height: 0.5rem;
+    outline: none;
+    appearance: none;
+}
+
+input[type='range']::-webkit-slider-thumb {
+    width: 1.8rem;
+    height: 1.8rem;
+    border-radius: 50%;
+    appearance: none;
+    cursor: pointer;
+    background-color: hsl(252, 11%, 91%);
+}
+
+input[type='range']::-webkit-slider-thumb:hover {
+    background-color: black;
+    border: 2px solid hsl(127, 100%, 82%);
+    border-radius: 50%;
 }
